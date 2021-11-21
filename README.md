@@ -5,7 +5,7 @@ Helps with rapid programmatic document creation. Inspired by the Odin Project's 
 ## Example
 
 Assume you wanted to dynamically create a complex structure on the fly, like the following:
-
+```
 <article class='book'>
 	<header><h1>Book Title</h1></header>
 	<section>
@@ -19,11 +19,12 @@ Assume you wanted to dynamically create a complex structure on the fly, like the
 		</div>
 	</section>
 </article>
-
+```
 This could get complicated with a ton of document element creations and attribute settings.
 With nest, this can be done easily and quickly. You can recreate the exact same structure
 with the following commands:
 
+```
 nest.push("article.book header h1");
 nest.text = "Book Title";
 nest.cap();
@@ -40,3 +41,4 @@ nest.push("li");
 nest.text = "Book ISBN";
 nest.cap();
 document.querySelector("body").appendChild(nest.pop());
+```
