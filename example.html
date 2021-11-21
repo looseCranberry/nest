@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nest Example</title>
+		<script src="nest.js"></script>
+	</head>
+	<body>
+		<script>
+			nest.push("article.book header h1");
+			nest.text = "Book Header";
+			nest.cap();
+			nest.push("section img");
+			nest.attr(["src=Book.New.png", "width=220px", "height=auto", "checked"]);
+			nest.cap("img");
+			nest.push("div ul li h2");
+			nest.text = "List Item Headered";
+			nest.cap("li");
+			nest.push("li");
+			nest.text = "List Item two";
+			nest.cap("ul");
+			nest.push("div");
+			nest.cap();
+			document.querySelector("body").appendChild(nest.pop());
+		</script>
+	</body>
+</html>
